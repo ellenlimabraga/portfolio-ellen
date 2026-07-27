@@ -10,7 +10,8 @@ e grão de filme, inspiradas no moodboard da Ellen.
 ## Stack
 - **Next.js 14.2** (App Router, JavaScript/JSX)
 - **Tailwind CSS 3.4** + design tokens em `app/globals.css`
-- **framer-motion** (motion) e **ogl** (WebGL) para os efeitos
+- **framer-motion** e **ogl** (WebGL) para os efeitos 2D/shader
+- **three.js + @react-three/fiber + drei + @react-three/rapier + meshline** para o Lanyard 3D
 - **shadcn** (`components.json`) com os registries `@react-bits`, `@aceternity` e `@magicui` já configurados
 - Export estático (`output: "export"`) — o `next build` gera `out/` para publicar em qualquer host
 
@@ -36,7 +37,7 @@ adicionar novos componentes.
 - `CircularGallery` — carrossel arrastável com curvatura
 - `SpecularButton` — botão com brilho especular no cursor
 - `BorderGlow` — borda cônica animada (cards de serviço)
-- `Lanyard` — crachá pendurado arrastável (spring physics)
+- `Lanyard` — crachá 3D pendurado e arrastável (three.js + física rapier + banda meshline; card e banda procedurais, sem GLB externo)
 
 **aceternity/**
 - `Terminal` — bloco "sobre" com digitação

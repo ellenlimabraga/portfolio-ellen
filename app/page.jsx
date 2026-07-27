@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import "./page.css";
 
 import Aurora from "@/components/react-bits/Aurora";
@@ -11,11 +12,16 @@ import FlowingMenu from "@/components/react-bits/FlowingMenu";
 import CircularGallery from "@/components/react-bits/CircularGallery";
 import SpecularButton from "@/components/react-bits/SpecularButton";
 import BorderGlow from "@/components/react-bits/BorderGlow";
-import Lanyard from "@/components/react-bits/Lanyard";
 import Terminal from "@/components/aceternity/Terminal";
 import AsciiArtMatrix from "@/components/aceternity/AsciiArtMatrix";
 import DitherDuotone from "@/components/aceternity/DitherDuotone";
 import DiaTextReveal from "@/components/magicui/DiaTextReveal";
+
+// 3D Lanyard is client-only (three.js + rapier physics) — load without SSR.
+const Lanyard = dynamic(() => import("@/components/react-bits/Lanyard"), {
+  ssr: false,
+  loading: () => <div style={{ height: 460 }} />,
+});
 
 const WORKS = [
   { cat: "IA · Fotografia", text: "Clone Visual", pal: [[245, 182, 66], [255, 45, 120]] },
