@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-ellen",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfólio de Ellen Braga — Creative Director & IA Generativa",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "clsx": "2.1.1",
+    "framer-motion": "11.11.17",
+    "next": "^14.2.35",
+    "ogl": "1.0.11",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "2.5.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.47",
+    "tailwindcss": "3.4.14"
+  }
+}

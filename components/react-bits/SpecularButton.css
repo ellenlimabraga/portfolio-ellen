@@ -1,0 +1,49 @@
+.spec-btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: #0b0603;
+  background: var(--aurora);
+  transition: transform 0.25s ease;
+}
+.spec-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(160px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.55), transparent 60%);
+}
+.spec-btn:hover {
+  transform: translateY(-2px);
+}
+.spec-btn:hover::after {
+  opacity: 1;
+}
+.spec-label {
+  position: relative;
+  z-index: 2;
+}
+.spec-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.spec-ghost::after {
+  background: radial-gradient(160px circle at var(--mx, 50%) var(--my, 50%), rgba(245, 182, 66, 0.22), transparent 60%);
+}
+.spec-ghost:hover {
+  border-color: var(--gold);
+}

@@ -1,0 +1,11 @@
+.ascii-text {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.ascii-text canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 0 30px rgba(255, 45, 120, 0.2));
+}
